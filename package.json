@@ -1,6 +1,6 @@
 {
   "name": "dev-utils-plus",
-  "version": "1.0.4",
+  "version": "1.0.0",
   "description": "A comprehensive utility library for modern web development with TypeScript support",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
