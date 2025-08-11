@@ -1,6 +1,6 @@
 {
   "name": "dev-utils-plus",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Type-safe utility functions for JavaScript/TypeScript: string, array, object, date, validation, crypto, format, math",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
