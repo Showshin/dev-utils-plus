@@ -1,6 +1,19 @@
 # dev-utils-plus
 
-A TypeScript-first utility library for modern web development. Clean APIs, strict types, and zero runtime dependencies.
+[![npm version](https://img.shields.io/npm/v/dev-utils-plus)](https://www.npmjs.com/package/dev-utils-plus)
+[![license: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-Strict-blue)](https://www.typescriptlang.org/)
+
+Type-safe utility functions for JavaScript/TypeScript: string, array, object, date, validation, crypto, format, math. Clean APIs, strict types, zero runtime dependencies, and tree-shakable builds.
+
+## Features
+
+- **Type-safe utilities**: built with TypeScript, `.d.ts` included
+- **Zero dependencies**: lightweight and fast
+- **Tree-shakable**: import only what you need
+- **Node + Browser**: works across environments
+- **Broad coverage**: string, array, object, date, validation, crypto, format, math
+- **Lodash alternative**: modern, modular helper functions
 
 ## Install
 

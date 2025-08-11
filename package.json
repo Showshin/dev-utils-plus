@@ -1,9 +1,16 @@
 {
   "name": "dev-utils-plus",
   "version": "1.0.1",
-  "description": "A comprehensive utility library for modern web development with TypeScript support",
+  "description": "Type-safe utility functions for JavaScript/TypeScript: string, array, object, date, validation, crypto, format, math",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js"
+    }
+  },
   "scripts": {
     "build": "tsc",
     "test": "jest",
@@ -17,26 +24,37 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Showshin/dev-utils-plus.git"
+    "url": "git+https://github.com/Showshin/dev-utils-plus.git"
   },
   "keywords": [
     "utilities",
+    "utility",
+    "utils",
+    "helpers",
+    "toolkit",
     "typescript",
+    "type-safe",
     "javascript",
+    "node",
+    "browser",
     "web-development",
     "helper-functions",
     "string-utils",
     "array-utils",
     "object-utils",
     "date-utils",
-    "validation"
+    "validation",
+    "crypto",
+    "formatting",
+    "math-utils",
+    "lodash alternative"
   ],
   "author": "Your Name <your.email@example.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Showshin/dev-utils-plus/issues"
   },
-  "homepage": "https://github.com/Showshin/dev-utils-plus#readme",
+  "homepage": "https://github.com/Showshin/dev-utils-plus",
   "publishConfig": {
     "access": "public"
   },
