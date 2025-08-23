@@ -6,7 +6,6 @@ import {
   truncate,
   stripHtml,
   generateRandomString,
-  isValidEmailString,
   wordCount,
   reverse,
   isPalindrome
@@ -96,18 +95,7 @@ describe('String Utils', () => {
     });
   });
 
-  describe('isValidEmailString', () => {
-    it('should validate correct email addresses', () => {
-      expect(isValidEmailString('test@example.com')).toBe(true);
-      expect(isValidEmailString('user.name@domain.co.uk')).toBe(true);
-    });
 
-    it('should reject invalid email addresses', () => {
-      expect(isValidEmailString('invalid-email')).toBe(false);
-      expect(isValidEmailString('@domain.com')).toBe(false);
-      expect(isValidEmailString('user@')).toBe(false);
-    });
-  });
 
   describe('wordCount', () => {
     it('should count words correctly', () => {

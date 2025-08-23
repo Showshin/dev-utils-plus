@@ -133,9 +133,9 @@ describe('Array utilities', () => {
     it('should count elements with custom key function', () => {
       const words = ['apple', 'banana', 'cherry', 'date'];
       expect(countBy(words, word => word.length)).toEqual({
-        '4': 1,
-        '5': 2,
-        '6': 1
+        '4': 1, // 'date'
+        '5': 1, // 'apple'  
+        '6': 2  // 'banana', 'cherry'
       });
     });
   });
