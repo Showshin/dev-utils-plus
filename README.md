@@ -14,6 +14,9 @@ Type-safe utility functions for JavaScript/TypeScript: string, array, object, da
 - **Node + Browser**: works across environments
 - **Broad coverage**: string, array, object, date, validation, crypto, format, math
 - **Lodash alternative**: modern, modular helper functions
+- **Enhanced error handling**: comprehensive input validation with descriptive error messages
+- **Improved performance**: optimized algorithms and better memory usage
+- **Rich documentation**: detailed JSDoc comments with examples for every function
 
 ## Install
 
@@ -34,6 +37,9 @@ import {
   toCamelCase,
   toKebabCase,
   toSnakeCase,
+  toPascalCase,
+  escapeHtml,
+  cleanWhitespace,
   generateRandomString,
 
   // array
@@ -41,6 +47,10 @@ import {
   shuffle,
   chunk,
   flatten as flattenArray,
+  take,
+  drop,
+  max,
+  min,
 
   // object
   deepClone, 
@@ -65,6 +75,9 @@ import {
   // math
   clamp,
   median,
+  distance,
+  binomial,
+  randomInt,
 
   // validation
   isValidEmail,
@@ -75,24 +88,48 @@ import {
   fromBase64
 } from 'dev-utils-plus';
 
+// Enhanced string utilities
 capitalize('hello world'); // "Hello world"
 toCamelCase('hello-world'); // "helloWorld"
+toPascalCase('hello-world'); // "HelloWorld"
+escapeHtml('<div>Hello & world</div>'); // "&lt;div&gt;Hello &amp; world&lt;/div&gt;"
+cleanWhitespace('  hello   world  '); // "hello world"
+
+// Enhanced array utilities
 unique([1, 2, 2, 3]); // [1, 2, 3]
-formatCurrency(1234.56, 'USD'); // "$1,234.56"
+take([1, 2, 3, 4, 5], 3); // [1, 2, 3]
+drop([1, 2, 3, 4, 5], 2); // [3, 4, 5]
+max([1, 5, 3, 9, 2]); // 9
+
+// Enhanced math utilities
+clamp(10, 0, 5); // 5
 median([1, 2, 3, 4]); // 2.5
+distance(0, 0, 3, 4); // 5
+binomial(5, 2); // 10
+randomInt(1, 10); // Random integer between 1-10
+
+// Existing utilities work the same
+formatCurrency(1234.56, 'USD'); // "$1,234.56"
 isValidEmail('user@example.com'); // true
 ```
 
 ## Modules & APIs
 
 - String (`src/string`)
-  - `capitalize`, `toCamelCase`, `toKebabCase`, `toSnakeCase`
-  - `truncate`, `stripHtml`, `wordCount`, `reverse`, `isPalindrome`
-  - `generateRandomString`
+  - **Case conversion**: `capitalize`, `toCamelCase`, `toKebabCase`, `toSnakeCase`, `toPascalCase`, `toTitleCase`
+  - **Text manipulation**: `truncate`, `stripHtml`, `wordCount`, `reverse`, `isPalindrome`
+  - **Utility**: `generateRandomString`, `cleanWhitespace`, `escapeHtml`, `unescapeHtml`
+  - **Validation**: `isAlpha`, `isAlphanumeric`
+  - **Formatting**: `padString`
   - Note: email validation is in the Validation module (`isValidEmail`).
 
 - Array (`src/array`)
-  - `unique`, `shuffle`, `groupBy`, `chunk`, `flatten` (arrays), `intersection`, `difference`, `sortBy`, `range`, `countBy`, `compact`, `first`, `last`
+  - **Core utilities**: `unique`, `shuffle`, `groupBy`, `chunk`, `flatten` (with depth control)
+  - **Set operations**: `intersection`, `difference`
+  - **Sorting & filtering**: `sortBy`, `compact`
+  - **Access & manipulation**: `first`, `last`, `take`, `drop`
+  - **Analysis**: `countBy`, `max`, `min`
+  - **Generation**: `range`
 
 - Object (`src/object`)
   - `deepClone`, `deepMerge`, `pick`, `omit`, `get`, `set`
@@ -108,8 +145,12 @@ isValidEmail('user@example.com'); // true
   - `formatPostalCode`, `formatName`, `formatSentence`, `formatTitle`, `formatSlug`, `formatOrdinal`
 
 - Math (`src/math`)
-  - `clamp`, `lerp`, `mapRange`, `percentage`, `factorial`, `gcd`, `lcm`
-  - `isPrime`, `generatePrimes`, `sum`, `average`, `median`, `mode`, `standardDeviation`, `variance`, `randomInt`, `randomFloat`
+  - **Basic operations**: `clamp`, `lerp`, `mapRange`, `isBetween`, `roundTo`, `percentage`
+  - **Advanced math**: `factorial`, `gcd`, `lcm`, `nthRoot`, `binomial`
+  - **Number theory**: `isPrime`, `generatePrimes`
+  - **Statistics**: `sum`, `average`, `median`, `mode`, `standardDeviation`, `variance`
+  - **Random generation**: `randomInt`, `randomFloat`
+  - **Geometry**: `distance`, `degreesToRadians`, `radiansToDegrees`
 
 - Validation (`src/validation`)
   - `isValidEmail`, `isValidUrl`, `isValidPhoneNumber`, `isValidCreditCard`
