@@ -1,7 +1,6 @@
 import {
   unique, shuffle, chunk, flatten, take, drop, max, min,
-  groupBy, intersection, difference, sortBy, range, countBy,
-  compact, first, last
+  countBy, first, last
 } from './index';
 
 describe('Array utilities', () => {

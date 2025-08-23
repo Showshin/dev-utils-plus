@@ -1,7 +1,7 @@
 import {
-  clamp, lerp, mapRange, isBetween, roundTo, percentage,
-  factorial, gcd, lcm, isPrime, generatePrimes, sum, average,
-  median, mode, standardDeviation, variance, randomInt, randomFloat,
+  clamp, isBetween, roundTo, percentage,
+  factorial, gcd, lcm, isPrime, sum, average,
+  median, mode, randomInt, randomFloat,
   distance, degreesToRadians, radiansToDegrees, nthRoot, binomial
 } from './index';
 
